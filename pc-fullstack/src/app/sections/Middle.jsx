@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 {/* Components */}
 import ProductCard from '../components/ProductCard';
@@ -7,7 +8,7 @@ import BannerList from '../components/BannerList';
 
 const Middle = () => {
     return (
-      <section className="flex flex-col relative w-screen h-auto py-8 px-4">
+      <section className="flex flex-col relative w-screen h-auto py-8">
 
         {/* Header PC Banner */}
         <BannerCard />
@@ -25,6 +26,31 @@ const Middle = () => {
             <ProductCard />
             {/* Middle Card Components (Kinda like news) */}
             <BannerList />
+        </div>
+
+        <div id="header-pc" className="flex xl:flex-row flex-col justify-start p-8 items-center w-full h-[550px] rounded-md bg-gradient-to-b from-[#130D24] to-[#000342] gap-y-6 relative overflow-hidden mt-12">
+          <aside className="absolute bottom-[-100px]">
+            <Image
+              src="/assets/banner-pc.png"
+              alt="Header PC Image"
+              className="w-full h-full object-cover rounded-md scale-[1.75]"
+              width={500}
+              height={500}
+            />
+          </aside>
+          <header className="flex flex-col text-start text-white gap-y-4">
+            <div className="w-fit h-fit p-2 uppercase bg-indigo-600">
+              <span>newest prebuilt lineup</span>
+            </div>
+            <div className="flex flex-col font-bold text-3xl">
+              <span>New Look,</span>
+              <span>Better Performance</span>
+            </div>
+            <p className="text-lg font-medium">
+              Now built in our new custom cases.
+            </p>
+            <button className="w-full h-[50px] p-2 text-white border-2 border-white rounded-lg">Shop PC NAME | R Edition</button>
+          </header>
         </div>
 
       </section>

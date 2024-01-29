@@ -1,9 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 
-{/* Image */}
-import bannerImage from '../assets/bannercard-pc.png';
-
 const BannerCard = ({ chip, headerTitle, description, shopText, bannerImage }) => {
   return (
     <div className="flex flex-col justify-start p-8 items-center w-full h-[600px] rounded-md bg-gradient-to-b from-[#130D24] to-[#000342] gap-y-6 relative overflow-hidden">
@@ -14,27 +11,31 @@ const BannerCard = ({ chip, headerTitle, description, shopText, bannerImage }) =
         <button className="w-[150px] h-[50px] p-2 text-white border-2 border-white rounded-lg">{shopText}</button>
       </header>
       <aside className="absolute bottom-[-75px]">
-        <Image src={bannerImage} alt="Header PC Image" className="w-full h-full object-cover rounded-md scale-[1.5]" />
+        <Image src={bannerImage} alt="Header PC Image" height={500} width={500} className="w-full h-full object-cover rounded-md scale-[1.75]" />
       </aside>
     </div>
   );
 };
 
+import bannerImage1 from '../../../public/assets/banner-pc.png';
+import bannerImage2 from '../../../public/assets/banner-pc.png';
+
 const BannerList = () => {
+
   const banners = [
     {
-      chip: '$1,699',
+      chip: 'Test run?',
       headerTitle: 'Rent our most popular PC for $109/mo.',
       description: 'Get into PC gaming with no commitmentsupported by award-winning customer service and a lifetime warranty.',
       shopText: 'Rent now',
-      bannerImage: bannerImage,
+      bannerImage: '/assets/banner-pc.png',
     },
     {
-        chip: '$1,699',
-        headerTitle: 'Need something custom?',
+        chip: 'Custom?',
+        headerTitle: 'Build it your way.',
         description: "Let's bring in 2024 with a new custom built PC, your way. With the best quality parts to get your build where you want it.",
         shopText: 'Contact us',
-        bannerImage: bannerImage,
+        bannerImage: '/assets/banner-pc.png',
     },
   ];
 

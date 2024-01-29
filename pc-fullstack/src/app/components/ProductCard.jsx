@@ -6,7 +6,7 @@ import pcPlaceholder from '../assets/prebuilt-placeholder.png';
 
 const ProductCard = ({ pcPlaceholder, pcName, pcEditionName, rating, specs, price, shopLink }) => {
   return (
-    <div className="lg:max-w-md h-full first:mr-0 last:ml-0">
+    <div className="lg:max-w-md h-full first:mr-0 last:ml-0 px-4">
       <div className="flex flex-col h-full max-w-md relative">
         <div className="flex flex-col w-full h-full">
           <div className="relative w-full p-4 xl:p-10 mb-1 bg-gradient-to-b from-[#130D24] to-[#000342]">
